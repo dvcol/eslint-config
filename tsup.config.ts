@@ -1,10 +1,8 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['lib', '!lib/**/*.test.ts', '!lib/**/*.spec.ts'],
-  format: ['cjs', 'esm'],
+  entry: ['lib/index.ts'],
   dts: true,
-  clean: true,
-  splitting: true,
-  sourcemap: false,
+  format: ['esm'],
+  tsconfig: 'tsconfig.lib.json',
 });
