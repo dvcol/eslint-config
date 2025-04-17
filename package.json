@@ -1,17 +1,17 @@
 {
-  "name": "@dvcol/typescript-lib-template",
+  "name": "@dvcol/eslint-config",
   "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@10.8.1",
-  "description": "<description>",
+  "description": "Sharable eslint configs",
   "author": "dvcol",
   "license": "MIT",
-  "homepage": "https://github.com/dvcol/typescript-lib-template",
+  "homepage": "https://github.com/dvcol/eslint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvcol/typescript-lib-template.git"
+    "url": "https://github.com/dvcol/eslint-config.git"
   },
-  "bugs": "https://github.com/dvcol/typescript-lib-template/issues",
+  "bugs": "https://github.com/dvcol/eslint-config/issues",
   "keywords": [
     "typescript",
     "library",
