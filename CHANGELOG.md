@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/dvcol/eslint-config/compare/v1.1.0...v1.2.0) (2025-04-17)
+
+
+### Features
+
+* **test:** adds test overrides ([9d4f69d](https://github.com/dvcol/eslint-config/commit/9d4f69d84d7a3aa7041c7612e5281f6181ea1d8a))
+
 ## 1.1.0 (2025-04-17)
 
 
