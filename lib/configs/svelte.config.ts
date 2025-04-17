@@ -1,5 +1,7 @@
 import type { OptionsConfig, OptionsOverrides } from '@antfu/eslint-config';
+
 import type { EslintConfig, EslintOptionsConfig, UserConfig } from './base.config';
+
 import { defineTypescriptConfig, typescriptConfig } from './typescript.config';
 
 export const svelte: OptionsOverrides = {
