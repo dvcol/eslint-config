@@ -3,6 +3,7 @@ import type { OptionsConfig, OptionsOverrides, OptionsTypeScriptParserOptions, O
 import type { EslintConfig, EslintOptionsConfig, UserConfig } from './base.config';
 
 import { baseConfig, defineBaseConfig } from './base.config';
+import { test } from './test.config';
 
 export type OptionsTypeAware = OptionsTypeScriptWithTypes & OptionsOverrides;
 export type OptionsTypescriptParser = OptionsTypeScriptParserOptions & OptionsOverrides;
@@ -66,5 +67,5 @@ export function typescriptConfig(options?: EslintOptionsConfig): EslintOptionsCo
 }
 
 export async function defineTypescriptConfig(options?: EslintOptionsConfig, ...userConfigs: UserConfig[]): Promise<EslintConfig> {
-  return defineBaseConfig(typescriptConfig(options), ...userConfigs);
+  return defineBaseConfig(typescriptConfig(options), test, ...userConfigs);
 }

@@ -54,6 +54,12 @@ export const base: Linter.RulesRecord = {
       tsconfigRootDir: process.cwd(),
     },
   ],
+  'no-console': [
+    'error',
+    {
+      allow: ['info', 'warn', 'error'],
+    },
+  ],
 };
 
 export type EslintOptionsConfig = OptionsConfig & Omit<TypedFlatConfigItem, 'files'>;

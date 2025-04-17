@@ -57,5 +57,3 @@ export function styleConfig(options?: EslintOptionsConfig): EslintOptionsConfig 
     ..._options,
   };
 }
-
-export default styleConfig;
