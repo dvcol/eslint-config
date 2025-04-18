@@ -14,8 +14,8 @@ function toArray<T = string>(value?: T | T[]): T[] {
   return Array.isArray(value) ? value : [value];
 }
 
-export function testConfig(config: Linter.Config): Linter.Config {
-  const { files, rules, ..._config } = config;
+export function testConfig(config?: Linter.Config): Linter.Config {
+  const { files, rules, ..._config } = config ?? {};
   return {
     files: [
       ...toArray(test.files),
