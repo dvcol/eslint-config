@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/dvcol/eslint-config/compare/v1.2.0...v1.3.0) (2025-04-18)
+
+
+### Features
+
+* **plugin:** adds internal progress rule ([1611dac](https://github.com/dvcol/eslint-config/commit/1611dacbad87cf8b7af85203b068677a99185e68))
+
 ## [1.2.0](https://github.com/dvcol/eslint-config/compare/v1.1.0...v1.2.0) (2025-04-17)
 
 
