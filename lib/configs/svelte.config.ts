@@ -27,6 +27,8 @@ export function svelteConfig(options?: EslintOptionsConfig): EslintOptionsConfig
     {
       svelte: mergeSvelteConfig(_svelte),
       vue: false,
+      react: false,
+      solid: false,
       ..._options,
     },
   );

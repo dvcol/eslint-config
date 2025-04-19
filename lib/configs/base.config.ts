@@ -5,7 +5,6 @@ import defineConfig from '@antfu/eslint-config';
 
 import internal from '../rules';
 import { styleConfig } from './stylistic.config';
-import { testConfig } from './test.config';
 
 export const base: Linter.RulesRecord = {
   'antfu/curly': 'off',
@@ -79,10 +78,9 @@ export function baseConfig(options?: EslintOptionsConfig): EslintOptionsConfig {
 export type UserConfig = Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | Linter.Config[]>;
 export type EslintConfig = TypedFlatConfigItem[];
 export async function defineBaseConfig(options?: EslintOptionsConfig, ...userConfigs: UserConfig[]): Promise<EslintConfig> {
-  const { test, progress, ..._options } = options ?? {};
+  const { progress, ..._options } = options ?? {};
   return defineConfig(
     baseConfig(_options),
-    testConfig(test),
     {
       plugins: { dvcol: internal },
       rules: {

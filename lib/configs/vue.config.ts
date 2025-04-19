@@ -28,6 +28,8 @@ export function vueConfig(options?: EslintOptionsConfig): EslintOptionsConfig {
     {
       svelte: mergeVueConfig(_svelte),
       vue: false,
+      react: false,
+      solid: false,
       ..._options,
     },
   );
