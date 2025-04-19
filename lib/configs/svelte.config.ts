@@ -26,6 +26,7 @@ export function svelteConfig(options?: EslintOptionsConfig): EslintOptionsConfig
   return typescriptConfig(
     {
       svelte: mergeSvelteConfig(_svelte),
+      vue: false,
       ..._options,
     },
   );
