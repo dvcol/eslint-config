@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/dvcol/eslint-config/compare/v1.4.0...v1.5.0) (2025-04-19)
+
+
+### Features
+
+* **test:** rework test config to use overrides ([bb7f8e7](https://github.com/dvcol/eslint-config/commit/bb7f8e71298609a179ee80e70e7c3597cae59d92))
+
+
+### Bug Fixes
+
+* **config:** make svelte/vue exclusive ([3fcce14](https://github.com/dvcol/eslint-config/commit/3fcce14565b44e2f9b96f340268e9f9dc9fdd1e3))
+
 ## [1.4.0](https://github.com/dvcol/eslint-config/compare/v1.3.0...v1.4.0) (2025-04-19)
 
 
