@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/dvcol/eslint-config/compare/v1.3.0...v1.4.0) (2025-04-19)
+
+
+### Features
+
+* **vue:** adds vue config ([2b9b46d](https://github.com/dvcol/eslint-config/commit/2b9b46d50f29780cb313d84a9c498733917261af))
+
 ## [1.3.0](https://github.com/dvcol/eslint-config/compare/v1.2.0...v1.3.0) (2025-04-18)
 
 
