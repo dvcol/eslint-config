@@ -1,7 +1,7 @@
 {
   "name": "@dvcol/eslint-config",
   "type": "module",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "packageManager": "pnpm@10.8.1",
   "description": "Sharable eslint configs",
   "author": "dvcol",

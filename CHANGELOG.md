@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/dvcol/eslint-config/compare/v1.5.0...v1.6.0) (2025-04-21)
+
+
+### Features
+
+* **svelte:** adopt more recommended rules ([2f810e4](https://github.com/dvcol/eslint-config/commit/2f810e43cdab5a26e198ee22f978fdb15d4c5ba0))
+
 ## [1.5.0](https://github.com/dvcol/eslint-config/compare/v1.4.0...v1.5.0) (2025-04-19)
 
 
