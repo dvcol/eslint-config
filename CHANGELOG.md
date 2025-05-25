@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/dvcol/eslint-config/compare/v1.6.0...v1.6.1) (2025-05-25)
+
+
+### Bug Fixes
+
+* **base:** makes typescript config optional & fix typings ([8159349](https://github.com/dvcol/eslint-config/commit/8159349f4c652d82df0c3aa5b54037cb620e7df7))
+
 ## [1.6.0](https://github.com/dvcol/eslint-config/compare/v1.5.0...v1.6.0) (2025-04-21)
 
 
