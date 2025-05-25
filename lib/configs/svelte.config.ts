@@ -4,7 +4,7 @@ import type { EslintConfig, EslintOptionsConfig, UserConfig } from './base.confi
 
 import { defineTypescriptConfig, typescriptConfig } from './typescript.config';
 
-export const svelte: OptionsOverrides = {
+export const svelte = {
   overrides: {
     'svelte/html-quotes': [
       'error',
@@ -38,7 +38,7 @@ export const svelte: OptionsOverrides = {
     'svelte/html-closing-bracket-new-line': 'error',
     'svelte/html-self-closing': 'error',
   },
-};
+} satisfies OptionsOverrides;
 
 function mergeSvelteConfig(opt: OptionsConfig['svelte']) {
   if (opt === false) return false;

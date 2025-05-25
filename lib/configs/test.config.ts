@@ -4,12 +4,12 @@ import type { EslintConfig, EslintOptionsConfig, UserConfig } from './base.confi
 
 import { baseConfig, defineBaseConfig } from './base.config';
 
-export const test: OptionsOverrides = {
+export const test = {
   overrides: {
     // Remove when vitest rule is implemented @see https://github.com/vitest-dev/eslint-plugin-vitest/issues/591
     'ts/unbound-method': 'off',
   },
-};
+} satisfies OptionsOverrides;
 
 function mergeTestConfig(opt: OptionsConfig['test'] = true): OptionsConfig['test'] {
   if (opt === false) return false;

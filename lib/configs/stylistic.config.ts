@@ -2,23 +2,23 @@ import type { OptionsConfig, OptionsFormatters, OptionsOverrides, StylisticConfi
 
 import type { EslintOptionsConfig } from './base.config';
 
-export const prettierOptions: OptionsFormatters['prettierOptions'] = {
+export const prettierOptions = {
   printWidth: 150,
   singleQuote: true,
   trailingComma: 'all',
   arrowParens: 'always',
   bracketSpacing: true,
-};
+} satisfies OptionsFormatters['prettierOptions'];
 
-export const formatters: OptionsFormatters = {
+export const formatters = {
   html: 'prettier',
   markdown: 'prettier',
   svg: 'prettier',
   xml: 'prettier',
   prettierOptions,
-};
+} satisfies OptionsFormatters;
 
-export const stylistic: StylisticConfig & OptionsOverrides = {
+export const stylistic = {
   semi: true,
   overrides: {
     'style/quotes': [
@@ -31,7 +31,7 @@ export const stylistic: StylisticConfig & OptionsOverrides = {
     ],
     'style/brace-style': ['error', '1tbs'],
   },
-};
+} satisfies StylisticConfig & OptionsOverrides;
 
 function mergeStylisticConfig(opt: OptionsConfig['stylistic']) {
   if (opt === false) return false;

@@ -4,11 +4,12 @@ import type { EslintConfig, EslintOptionsConfig, UserConfig } from './base.confi
 
 import { defineTypescriptConfig, typescriptConfig } from './typescript.config';
 
-export const vue: OptionsVue = {
+export const vue = {
   sfcBlocks: true,
   vueVersion: 3,
   a11y: true,
-};
+  overrides: {},
+} satisfies OptionsVue;
 
 function mergeBlocks(blocks: OptionsVue['sfcBlocks']): OptionsVue['sfcBlocks'] {
   if (blocks === false) return false;

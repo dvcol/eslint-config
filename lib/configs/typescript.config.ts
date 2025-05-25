@@ -6,7 +6,7 @@ import { defineTestConfig, testConfig } from './test.config';
 
 export type OptionsTypeAware = OptionsTypeScriptWithTypes & OptionsOverrides;
 export type OptionsTypescriptParser = OptionsTypeScriptParserOptions & OptionsOverrides;
-export const typescript: OptionsTypeAware = {
+export const typescript = {
   tsconfigPath: 'tsconfig.json',
   overridesTypeAware: {
     'ts/strict-boolean-expressions': [
@@ -28,7 +28,8 @@ export const typescript: OptionsTypeAware = {
       },
     ],
   },
-};
+  overrides: {},
+} satisfies OptionsTypeAware;
 
 function isParserOptions(opt: OptionsConfig['typescript']): opt is OptionsTypescriptParser {
   if (typeof opt !== 'object') return false;

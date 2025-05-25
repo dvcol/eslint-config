@@ -6,7 +6,7 @@ import defineConfig from '@antfu/eslint-config';
 import internal from '../rules';
 import { styleConfig } from './stylistic.config';
 
-export const base: Linter.RulesRecord = {
+export const base = {
   'antfu/curly': 'off',
   'antfu/if-newline': 'off',
   'node/prefer-global/process': ['error', 'always'],
@@ -52,7 +52,6 @@ export const base: Linter.RulesRecord = {
       newlinesBetween: 'always',
       order: 'asc',
       type: 'natural',
-      tsconfigRootDir: process.cwd(),
     },
   ],
   'no-console': [
@@ -61,14 +60,31 @@ export const base: Linter.RulesRecord = {
       allow: ['info', 'warn', 'error'],
     },
   ],
-};
+} satisfies Linter.RulesRecord;
+
+export function getBaseConfig(
+  typescript: boolean = true,
+  tsconfigRootDir = process.cwd(),
+): Linter.RulesRecord {
+  if (!typescript) return base;
+  return {
+    ...base,
+    'perfectionist/sort-imports': [
+      'error',
+      {
+        ...base['perfectionist/sort-imports'][1],
+        tsconfigRootDir,
+      },
+    ],
+  };
+}
 
 export type EslintOptionsConfig = OptionsConfig & Omit<TypedFlatConfigItem, 'files'> & { test?: Linter.Config; progress?: boolean };
 export function baseConfig(options?: EslintOptionsConfig): EslintOptionsConfig {
   const { rules, ..._options } = options ?? {};
   return styleConfig({
     rules: {
-      ...base,
+      ...getBaseConfig(!!options?.typescript),
       ...rules,
     },
     ..._options,
