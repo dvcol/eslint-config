@@ -24,11 +24,11 @@ function mergeVueConfig(opt: OptionsConfig['vue']) {
 }
 
 export function vueConfig(options?: EslintOptionsConfig): EslintOptionsConfig {
-  const { svelte: _svelte, ..._options } = options ?? {};
+  const { vue: _vue, ..._options } = options ?? {};
   return typescriptConfig(
     {
-      svelte: mergeVueConfig(_svelte),
-      vue: false,
+      svelte: false,
+      vue: mergeVueConfig(_vue),
       react: false,
       solid: false,
       ..._options,
