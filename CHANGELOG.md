@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/dvcol/eslint-config/compare/v1.6.1...v1.7.0) (2025-10-25)
+
+
+### Features
+
+* **react:** adds new react config ([3c19c52](https://github.com/dvcol/eslint-config/commit/3c19c52a4df232aae5763d9c40d2b826e24bc997))
+
 ### [1.6.1](https://github.com/dvcol/eslint-config/compare/v1.6.0...v1.6.1) (2025-05-25)
 
 
