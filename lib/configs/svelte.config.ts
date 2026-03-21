@@ -2,6 +2,8 @@ import type { OptionsConfig, OptionsOverrides } from '@antfu/eslint-config';
 
 import type { EslintConfig, EslintOptionsConfig, UserConfig } from './base.config';
 
+import tsEslintParser from '@typescript-eslint/parser';
+
 import { defineTypescriptConfig, typescriptConfig } from './typescript.config';
 
 export const svelte = {
@@ -60,5 +62,19 @@ export function svelteConfig(options?: EslintOptionsConfig): EslintOptionsConfig
 }
 
 export async function defineSvelteConfig(options?: EslintOptionsConfig, ...userConfigs: UserConfig[]): Promise<EslintConfig> {
-  return defineTypescriptConfig(svelteConfig(options), ...userConfigs);
+  return defineTypescriptConfig(
+    svelteConfig(options),
+    {
+      // Exclude .svelte.ts/.svelte.js from svelte parser to avoid infinite recursion between svelte-eslint-parser and @typescript-eslint/parser
+      files: ['**/*.svelte.ts', '**/*.svelte.js'],
+      languageOptions: {
+        parser: tsEslintParser,
+        parserOptions: {
+          extraFileExtensions: [],
+          parser: undefined,
+        },
+      },
+    },
+    ...userConfigs,
+  );
 }
