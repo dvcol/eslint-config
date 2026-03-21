@@ -30,10 +30,11 @@ export const base = {
     'error',
     {
       groups: [
-        'type',
-        'internal-type',
-        ['parent-type', 'sibling-type'],
-        'index-type',
+        'type-import',
+        ['type-builtin', 'type-external'],
+        ['type-parent', 'type-sibling', 'type-internal'],
+        'type-index',
+        'ts-equals-import',
 
         'builtin',
         'external',
@@ -42,14 +43,13 @@ export const base = {
 
         'index',
         'side-effect',
-        'object',
 
         'style',
         'side-effect-style',
 
         'unknown',
       ],
-      newlinesBetween: 'always',
+      newlinesBetween: 1,
       order: 'asc',
       type: 'natural',
     },
@@ -73,7 +73,7 @@ export function getBaseConfig(
       'error',
       {
         ...base['perfectionist/sort-imports'][1],
-        tsconfigRootDir,
+        tsconfig: { rootDir: tsconfigRootDir },
       },
     ],
   };

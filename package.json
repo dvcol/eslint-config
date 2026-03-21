@@ -18,10 +18,9 @@
     "eslint-config"
   ],
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "files": [
     "*.md",
     "LICENSE",
@@ -33,7 +32,7 @@
   },
   "scripts": {
     "prepare": "husky",
-    "build": "tsup && publint",
+    "build": "tsdown && publint",
     "watch": "npm run build -- --watch lib",
     "lint": "eslint lib",
     "lint:fix": "eslint lib --fix",
@@ -61,30 +60,30 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "^6.0.0",
+    "@antfu/eslint-config": "^7.7.3",
     "chalk": "^5.6.2",
-    "ora": "^9.0.0"
+    "ora": "^9.3.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "@eslint-react/eslint-plugin": "^2.2.2",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@eslint-react/eslint-plugin": "^3.0.0",
     "@prettier/plugin-xml": "^3.4.2",
-    "@types/node": "^24.8.1",
-    "@vitest/coverage-v8": "^3.2.4",
-    "eslint": "^9.38.0",
-    "eslint-plugin-format": "^1.0.2",
+    "@types/node": "^25.5.0",
+    "@vitest/coverage-v8": "^4.1.0",
+    "eslint": "^10.1.0",
+    "eslint-plugin-format": "^2.0.1",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-react-refresh": "^0.5.2",
     "extract-changelog-release": "^1.0.2",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.4",
-    "prettier": "^3.6.2",
-    "publint": "^0.3.14",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1",
+    "publint": "^0.3.18",
     "standard-version": "^9.5.0",
-    "tsup": "^8.5.0",
+    "tsdown": "^0.21.4",
     "typescript": "^5.9.3",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.0"
   },
   "lint-staged": {
     "*.{js,cjs,mjs,jsx,ts,tsx,vue,svelte,json,md,yml,html,md,svg,xml}": [
