@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.6](https://github.com/dvcol/eslint-config/compare/v1.8.5...v1.8.6) (2026-03-21)
+
+
+### Bug Fixes
+
+* **svelte:** fix infinite recursion ([b693340](https://github.com/dvcol/eslint-config/commit/b6933406670dd936a29d6f855a1c513ce95c5bf8))
+
 ### [1.8.5](https://github.com/dvcol/eslint-config/compare/v1.8.4...v1.8.5) (2026-03-21)
 
 ### [1.8.4](https://github.com/dvcol/eslint-config/compare/v1.8.3...v1.8.4) (2026-03-21)
