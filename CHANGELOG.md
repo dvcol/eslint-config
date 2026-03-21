@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/dvcol/eslint-config/compare/v1.7.0...v1.8.0) (2026-03-21)
+
+
+### Features
+
+* bump eslint to 10 & antfu to 7 ([dd251b3](https://github.com/dvcol/eslint-config/commit/dd251b3d6a6a5c95eba07e015ee04ba526112e4b))
+
 ## [1.7.0](https://github.com/dvcol/eslint-config/compare/v1.6.1...v1.7.0) (2025-10-25)
 
 
