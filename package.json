@@ -43,7 +43,8 @@
     "release:changelog": "extract-changelog-release > RELEASE.md"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "peerDependencies": {
     "@prettier/plugin-xml": ">= 3.4.0",
