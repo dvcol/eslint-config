@@ -1,15 +1,12 @@
 import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config';
 import type { Linter } from 'eslint';
 
-import defineConfig from '@antfu/eslint-config';
+import defineConfig, { GLOB_MARKDOWN } from '@antfu/eslint-config';
 
 import internal from '../rules';
 import { styleConfig } from './stylistic.config';
 
-export const base = {
-  'antfu/curly': 'off',
-  'antfu/if-newline': 'off',
-  'node/prefer-global/process': ['error', 'always'],
+export const perfectionist = {
   'perfectionist/sort-exports': [
     'error',
     {
@@ -54,6 +51,13 @@ export const base = {
       type: 'natural',
     },
   ],
+} satisfies Linter.RulesRecord;
+
+export const base = {
+  'antfu/curly': 'off',
+  'antfu/if-newline': 'off',
+  'node/prefer-global/process': ['error', 'always'],
+  ...perfectionist,
   'no-console': [
     'error',
     {
@@ -97,6 +101,10 @@ export async function defineBaseConfig(options?: EslintOptionsConfig, ...userCon
   const { progress, ..._options } = options ?? {};
   return defineConfig(
     baseConfig(_options),
+    {
+      files: [GLOB_MARKDOWN],
+      rules: Object.fromEntries(Object.keys(perfectionist).map(key => [key, 'off'])),
+    },
     {
       plugins: { dvcol: internal },
       rules: {
