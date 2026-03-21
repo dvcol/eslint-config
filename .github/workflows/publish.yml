@@ -31,7 +31,9 @@ jobs:
   publish-npm:
     name: ☁️ Publish
     runs-on: ubuntu-latest
-    environment: npm
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/@dvcol/eslint-config
 
     steps:
       - name: ⛙ Checkout branch ${{ github.ref }}

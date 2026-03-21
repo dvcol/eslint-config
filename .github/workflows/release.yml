@@ -25,7 +25,9 @@ jobs:
   release:
     name: 📦 Tag and release commit
     runs-on: ubuntu-latest
-    environment: github
+    environment:
+      name: github
+      url: https://github.com/dvcol/eslint-config/releases
 
     outputs:
       tag-name: ${{ steps.push-tag.outputs.tag_name }}
