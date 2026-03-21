@@ -9,7 +9,7 @@
   "homepage": "https://github.com/dvcol/eslint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvcol/eslint-config.git"
+    "url": "git+https://github.com/dvcol/eslint-config.git"
   },
   "bugs": "https://github.com/dvcol/eslint-config/issues",
   "keywords": [
